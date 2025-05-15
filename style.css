@@ -1,0 +1,226 @@
+
+        /* Base reset and typography */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 16vh; /* Use min-height to allow content to push height */
+            background: #0B0E14;
+            padding: 16px;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .login-container {
+            position: relative;
+            background: #1E2635;
+            padding: 30px 20px 16px;
+            border-radius: 8px;
+            width: 98.9%; /* Make it nearly fit to phone screen */
+            /* Removed max-width to allow wider on larger phones */
+            height: 98.9%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Distribute space vertically */
+            min-height: 500px; /* Give it a reasonable minimum height */
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: #8899AA;
+            cursor: pointer;
+            z-index: 10; /* Ensure it's above other content */
+        }
+
+        .close-btn:hover {
+            color: #fff;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .tabs {
+            display: flex;
+            margin-bottom: 24px;
+        }
+
+        .tab {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .tab.active {
+            background: #2979FF;
+        }
+
+        .tab:not(.active) {
+            background: #2E3949;
+            color: #8899AA;
+        }
+        .tab:not(.active):hover {
+            background: #3c4a5c; /* Slightly lighter on hover */
+        }
+
+
+        .tab .icon {
+            font-size: 16px;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .input-group .flag {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: auto;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 9px;
+            padding-left: 10px;
+            background: #2E3949;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            line-height: 1.2;
+            outline: none; /* Remove default outline */
+        }
+
+        .input-group input:focus {
+            border: 1px solid #2979FF; /* Highlight on focus */
+        }
+
+
+        .input-group input[type="tel"] {
+            padding-left: 44px;
+        }
+
+        .input-group input::placeholder {
+            color: #8899AA;
+        }
+
+        .input-group .toggle-pw {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #8899AA;
+            font-size: 16px;
+            padding: 5px; /* Make clickable area larger */
+        }
+        .input-group .toggle-pw:hover{
+            color: #fff;
+        }
+
+
+        .recover {
+            text-align: center; /* Align recover link to the right */
+            font-size: 14px;
+            color: #8899AA;
+            margin-bottom: 220px;
+        }
+
+        .recover a {
+            color: #A0C4FF;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .recover a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-text {
+            text-align: center; /* Center footer text */
+            margin-top: 20px; /* Adjusted margin to be closer to the button */
+            margin-bottom: 0; /* Remove bottom margin if any */
+        }
+
+        .footer-text p {
+            font-size: 14px;
+            color: #8899AA;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        .footer-text a {
+            font-size: 14px;
+            color: #A0C4FF;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer-text a:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 14px;
+            background: #2979FF;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px; /* Added margin to separate from recover link */
+            line-height: 1;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover{
+            background-color: #1a63e0; /* Darker blue on hover */
+        }
+
+
+        form {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            /* Adjust form content alignment */
+            justify-content: flex-start; /* Align form content to the top */
+            align-items: center; /* Center form items horizontally */
+        }
+
+        form .input-group,
+        form .recover,
+        form .btn,
+        form .footer-text {
+            width: 100%; /* Ensure form elements take full width */
+        }
